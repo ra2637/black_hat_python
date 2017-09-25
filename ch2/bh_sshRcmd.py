@@ -1,11 +1,11 @@
 import threading
-import prarmiko
+import paramiko
 import subprocess
 
-def ssh_command(ip, user, passwd, command)
-    client = prarmiko.SSHClient()
+def ssh_command(ip, user, passwd, command):
+    client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect=(ip, username=user, passowrd=passwd)
+    client.connect(ip, username=user, password=passwd)
     ssh_session = client.get_transport().open_session()
     if ssh_session.active:
         ssh_session.send(command)
