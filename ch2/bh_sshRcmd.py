@@ -21,4 +21,4 @@ def ssh_command(ip, user, passwd, command):
         client.close()
     return
 
-ssh_command('192.168.33.30', 'vagrant', 'vagrant', 'ClientConnected')
+ssh_command('192.168.33.1', 'vagrant', 'vagrant', 'ClientConnected')
